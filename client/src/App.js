@@ -6,6 +6,7 @@ import { useAuth0 } from "./react-auth0-spa";
 import { Router, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import Profile from './components/Profile';
+import ExternalApi from './components/ExternalApi';
 import history from './utils/history';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Switch>
           <Route path="/" exact />
           <PrivateRoute path="/profile" component={Profile} />
+          <PrivateRoute path="/external-api" component={ExternalApi} />
         </Switch>
       </Router>
     </div>
